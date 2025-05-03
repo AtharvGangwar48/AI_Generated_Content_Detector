@@ -1,0 +1,23 @@
+/* App layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding-top: 80px; /* Height of the navbar */
+  padding-bottom: var(--space-8);
+}
+
+/* Page transition animations */
+.page-transition {
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  main {
+    padding-top: 70px; /* Smaller navbar on mobile */
+  }
+}

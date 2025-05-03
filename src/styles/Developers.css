@@ -1,0 +1,121 @@
+.developers {
+  padding: var(--space-16) 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  margin-bottom: var(--space-16);
+}
+
+.team-member {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.team-member:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.member-image {
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%;
+  position: relative;
+  overflow: hidden;
+}
+
+.member-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.team-member:hover .member-image img {
+  transform: scale(1.05);
+}
+
+.member-content {
+  padding: var(--space-6);
+}
+
+.member-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-2);
+}
+
+.member-content h3 {
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+}
+
+.member-content p {
+  color: var(--color-text-light);
+  margin-bottom: var(--space-4);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.member-social {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.member-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-gray-100);
+  color: var(--color-text);
+  transition: all var(--transition-normal);
+}
+
+.member-social a:hover {
+  background-color: var(--color-primary);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.team-approach {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: var(--space-8);
+  background-color: var(--color-gray-50);
+  border-radius: var(--radius-lg);
+}
+
+.team-approach h2 {
+  margin-bottom: var(--space-4);
+  font-size: 2rem;
+}
+
+.team-approach p {
+  color: var(--color-text-light);
+  margin-bottom: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
