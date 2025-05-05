@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiGithub, FiMail, FiLinkedin, FaXTwitter } from 'react-icons/fi';
+import { FiGithub, FiMail, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import '../styles/Footer.css';
 
 const Footer = () => {
@@ -40,7 +40,7 @@ const Footer = () => {
                 <FiLinkedin />
               </a>
               <a href="https://x.com/Atharv_48" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <FaXTwitter />
+                <FiTwitter />
               </a>
             </div>
           </div>
