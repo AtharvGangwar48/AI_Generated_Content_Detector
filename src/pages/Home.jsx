@@ -105,7 +105,7 @@ const Home = () => {
             <p>
               This makes our detection fast, explainable, and usable offline—ideal for schools, publishers, and content platforms.
             </p>
-            <a href="https://drive.google.com/file/d/1ZVFwXYeZXWUa2ko9aVD20IlH_lUKila_/preview" target="_blank" rel="noopener noreferrer" className="btn accent">Read Our Paper</a>
+            <a href="https://drive.google.com/file/d/1ZVFwXYeZXWUa2ko9aVD20IlH_lUKila_/view" target="_blank" rel="noopener noreferrer" className="btn accent">Read Our Paper</a>
           </motion.div>
           <motion.div className="research-image" variants={fadeIn}>
             <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="research illustration" />
