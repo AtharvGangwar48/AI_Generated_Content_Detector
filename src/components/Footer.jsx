@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiGithub, FiMail, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { FiGithub, FiMail, FiLinkedin, FaXTwitter } from 'react-icons/fi';
 import '../styles/Footer.css';
 
 const Footer = () => {
@@ -30,17 +30,17 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-title">Connect</h3>
             <div className="footer-social">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <a href="https://github.com/AtharvGangwar48/AI_Generated_Content_API" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <FiGithub />
               </a>
-              <a href="mailto:info@aicontentchecker.com" aria-label="Email">
+              <a href="mailto:atharvgangwar8@gmail.com" aria-label="Email">
                 <FiMail />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://in.linkedin.com/in/atharvgangwar" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <FiLinkedin />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <FiTwitter />
+              <a href="https://x.com/Atharv_48" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <FaXTwitter />
               </a>
             </div>
           </div>
