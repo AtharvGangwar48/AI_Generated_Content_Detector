@@ -24,47 +24,47 @@ const staggerContainer = {
 
 const developers = [
   {
-    name: "Alex Johnson",
-    role: "Machine Learning Lead",
-    bio: "Alex specializes in natural language processing and led the development of the core detection algorithm. With 8 years of experience in machine learning, Alex has published numerous papers on language models and AI detection techniques.",
-    image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
+    name: "Atharv Gangwar",
+    role: "Team Lead (Frontend)",
+    bio: "The development of this algorithm, which uses simple data structures to detect human versus AI-generated content, was initiated by Atharv Gangwar. He led the team through the algorithm's development and research phases, and further contributed by designing its web interface.",
+    image: "https://atharvgangwar.netlify.app/images/pic2.jpeg",
     social: {
-      github: "https://github.com",
-      linkedin: "https://linkedin.com",
-      email: "mailto:alex@example.com"
+      github: "https://github.com/AtharvGangwar48",
+      linkedin: "https://www.linkedin.com/in/atharvgangwar/",
+      email: "mailto:atharvgangwar8@gmail.com"
     }
   },
   {
-    name: "Sam Rivera",
-    role: "Frontend Developer",
-    bio: "Sam created the user interface and experience for the AI Content Checker. With expertise in React and modern web technologies, Sam ensured the application is intuitive, accessible, and responsive across all devices.",
-    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg",
+    name: "Nivedan Belwal",
+    role: "Backend (Data Structures)",
+    bio: "Nivedan Belwal played a key role in the project's success by developing the crucial Data Structure component of the code, ensuring the algorithm's efficient operation. His contributions included researching and implementing Hashing, Tries, Graphs, Edit Distance, and Heaps.",
+    image: "/Nevidan.jpg",
     social: {
       github: "https://github.com",
       linkedin: "https://linkedin.com",
-      email: "mailto:sam@example.com"
+      email: "mailto:nivedanbelwal627@gmail.com"
     }
   },
   {
-    name: "Taylor Chen",
-    role: "Backend Engineer",
-    bio: "Taylor developed the API and server architecture for the AI Content Checker. Their work ensures the application can handle high traffic volumes while maintaining fast response times and data security.",
-    image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg",
+    name: "Dhruv Negi",
+    role: "Backend (Data Collection)",
+    bio: "Dhuruv Negi significantly contributed to the algorithm's accuracy by meticulously gathering essential data, including AI-like words, AI sample tokens, and common AI-generated phrases. This information proved critical for the algorithm's precise and effective operation.",
+    image: "/Dhruv.jpg",
     social: {
       github: "https://github.com",
       linkedin: "https://linkedin.com",
-      email: "mailto:taylor@example.com"
+      email: "mailto:negi67291@gmail.com"
     }
   },
   {
-    name: "Jordan Smith",
-    role: "Research Scientist",
-    bio: "Jordan conducted the linguistic research that forms the foundation of our detection system. With a PhD in Computational Linguistics, Jordan's expertise in language patterns and AI text generation was crucial to the project.",
-    image: "https://images.pexels.com/photos/1181391/pexels-photo-1181391.jpeg",
+    name: "Aditya Awasthi",
+    role: "Backend (Scoring & Classifying System)",
+    bio: "Aditya Awasthi developed a vital component of the algorithm: a sophisticated Scoring & Classifying system. This system determines the accuracy of AI-generated content by effectively distinguishing between AI and human-written text.",
+    image: "/Aditya.png",
     social: {
       github: "https://github.com",
       linkedin: "https://linkedin.com",
-      email: "mailto:jordan@example.com"
+      email: "mailto:adityaawasthi069@gmail.com"
     }
   }
 ];
@@ -84,7 +84,7 @@ const Developers = () => {
             variants={fadeIn}
           >
             <h1>Meet Our Team</h1>
-            <p>The talented individuals behind the AI Content Checker project</p>
+            <p>The individuals behind the AI Content Checker project</p>
           </motion.div>
 
           <motion.div 
@@ -96,7 +96,7 @@ const Developers = () => {
                 key={index} 
                 className="team-member"
                 variants={fadeIn}
-                whileHover={{ y: -8 }}
+                whileHover={{ scale: 1.05 }}
               >
                 <div className="member-image">
                   <img src={developer.image} alt={developer.name} />
@@ -110,7 +110,7 @@ const Developers = () => {
                       <FiGithub />
                     </a>
                     <a href={developer.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                      <FiLinkedin />
+                      < FiLinkedin />
                     </a>
                     <a href={developer.social.email} aria-label="Email">
                       <FiMail />
@@ -127,13 +127,12 @@ const Developers = () => {
           >
             <h2>Our Approach</h2>
             <p>
-              Our team combines expertise in machine learning, linguistic analysis, and software development to create 
-              a reliable tool for detecting AI-generated content. We've worked collaboratively to ensure the AI Content 
-              Checker is accurate, user-friendly, and accessible to everyone.
+              Our team brought together individuals with interest in Data Structures and Algorithms, as well as the Design and Analysis of algorithms. As a 
+              4th-semester college project focused on Data Structures through project-based learning, we developed this project to effectively showcase our 
+              skills and understanding in this subject.
             </p>
             <p>
-              Through continuous research and refinement of our algorithms, we strive to stay ahead of advancements in 
-              AI text generation, ensuring our detection capabilities remain state-of-the-art.
+              This project serves as a practical demonstration of our collective abilities in applying data structure principles to solve a real-world problem.
             </p>
           </motion.div>
         </div>

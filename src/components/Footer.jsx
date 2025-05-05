@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-title">AI Content Checker</h3>
             <p className="footer-description">
-              A tool for detecting AI-generated content with high accuracy using advanced machine learning algorithms.
+              A tool for detecting AI-generated content with high accuracy using Data Structure based Algorithm.
             </p>
           </div>
           

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiSend, FiGithub } from 'react-icons/fi';
 import '../styles/Suggestion.css';
 
 const fadeIn = {
@@ -50,26 +50,24 @@ const Suggestion = () => {
                   <FiMail />
                 </div>
                 <h3>Email</h3>
-                <p>feedback@aicontentchecker.com</p>
-                <p>support@aicontentchecker.com</p>
+                <p>atharvgangwar8@gmail.com</p>
+                <p>negi67291@gmail.com</p>
               </motion.div>
 
               <motion.div className="contact-card" variants={fadeIn}>
                 <div className="contact-icon">
-                  <FiPhone />
+                  <FiGithub />
                 </div>
-                <h3>Phone</h3>
-                <p>+1 (555) 123-4567</p>
-                <p>Mon-Fri, 9AM-5PM EST</p>
+                <h3>Github Repository (API)</h3>
+                <a href='https://github.com/AtharvGangwar48'>See Repository</a>
               </motion.div>
 
               <motion.div className="contact-card" variants={fadeIn}>
                 <div className="contact-icon">
-                  <FiMapPin />
+                  <FiGithub />
                 </div>
-                <h3>Location</h3>
-                <p>123 Tech Avenue</p>
-                <p>San Francisco, CA 94107</p>
+                <h3>Github Repository (Frontend)</h3>
+                <a href='https://github.com/AtharvGangwar48'>See Repository</a>
               </motion.div>
             </motion.div>
 
@@ -81,7 +79,7 @@ const Suggestion = () => {
               <p>We've created a Google Form to collect your feedback and suggestions. Please click the button below to access the form and share your thoughts.</p>
               
               <a 
-                href="https://forms.google.com/example-form" 
+                href="https://docs.google.com/forms/d/e/1FAIpQLScx_2EA1Fk_eqGGR-Q3bUKJevSD7UfA8eFP3S-wTNBJqRE-UA/viewform?usp=dialog" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="google-form-btn"
@@ -108,12 +106,10 @@ const Suggestion = () => {
             className="join-community"
             variants={fadeIn}
           >
-            <h2>Join Our Community</h2>
-            <p>Connect with other users and our development team to discuss AI content detection and stay updated on new features.</p>
+            <h2>Explore Our Project</h2>
+            <p>We would greatly appreciate your suggestions and feedback on our project, as they are invaluable to us. Please check out the google form.</p>
             <div className="community-links">
-              <a href="#" className="btn btn-primary">Join Discord</a>
-              <a href="#" className="btn btn-secondary">Follow on Twitter</a>
-              <a href="#" className="btn btn-secondary">Subscribe to Newsletter</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScx_2EA1Fk_eqGGR-Q3bUKJevSD7UfA8eFP3S-wTNBJqRE-UA/viewform?usp=dialog" className="btn btn-primary">Suggestion & Feedback</a>
             </div>
           </motion.div>
         </div>

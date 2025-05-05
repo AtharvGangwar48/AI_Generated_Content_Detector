@@ -108,16 +108,36 @@ function Trial() {
                 <li>Results show whether the content appears to be AI-generated or human-written</li>
               </ol>
               
-              <h2>About the technology</h2>
-              <p>
-                Our AI detection tool uses advanced natural language processing to identify patterns 
-                characteristic of AI-generated text. The algorithm analyzes various linguistic markers 
-                including vocabulary, syntax, semantic coherence, and stylistic consistency.
-              </p>
-              <p>
-                While highly accurate, this technology is still evolving. Results should be considered 
-                as guidance rather than definitive proof of content origin.
-              </p>
+              <h2>Flow of the Algorithm</h2>
+              <p>The algorithm follows a structured process to analyze and classify the input text:</p>
+              <ul>
+                <li>
+                  <strong>Preprocessing</strong> – Cleans and tokenizes the input text.
+                </li>
+                <li>
+                  <strong>Top-K Frequent Words</strong> – Extracts the most frequent words using a heap.
+                </li>
+                <li>
+                  <strong>Word Frequency (Hashing)</strong> – Creates a hash map of word counts for analysis.
+                </li>
+                <li>
+                  <strong>Phrase Matching (Trie)</strong> – Detects how many known AI-generated phrases exist in the text using a trie.
+                </li>
+                <li>
+                  <strong>Similarity with AI Text (Edit Distance)</strong> – Uses Levenshtein Distance to measure similarity with known AI samples.
+                </li>
+                <li>
+                  <strong>AI Vocabulary Match</strong> – Counts how many top words match a list of common AI-like words.
+                </li>
+                <li>
+                  <strong>Scoring & Classification</strong> – Combines phrase matches, similarity, and AI word match using weighted scoring to classify the text.
+                </li>
+              </ul>
+              <p><strong>Final Output:</strong></p>
+              <ul>
+                <li><code>label</code>: either <strong>"AI-Generated"</strong> or <strong>"Human-Written"</strong></li>
+                <li><code>confidence</code>: a percentage score indicating how likely the text is AI-generated</li>
+              </ul>
             </div>
           </motion.div>
         </div>

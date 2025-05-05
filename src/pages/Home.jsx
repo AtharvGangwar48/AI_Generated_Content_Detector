@@ -1,13 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiShield, FiTrendingUp, FiCode, FiFileText } from 'react-icons/fi';
+import {
+  FaHashtag, FaBrain, FaNetworkWired,
+  FaFileAlt, FaSortAmountUp
+} from 'react-icons/fa';
 import '../styles/Home.css';
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: { duration: 0.6 }
   }
@@ -17,136 +20,106 @@ const staggerContainer = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.2
-    }
+    transition: { staggerChildren: 0.2 }
   }
 };
 
 const Home = () => {
   return (
-    <motion.div 
-      className="page-transition"
+    <motion.div
+      className="homepage"
       initial="hidden"
       animate="visible"
       exit={{ opacity: 0 }}
     >
+
       {/* Hero Section */}
-      <section className="hero">
-        <div className="container">
-          <motion.div 
-            className="hero-content"
-            variants={fadeIn}
-          >
-            <h1 className="hero-title">Detect AI-Generated Content with Confidence</h1>
-            <p className="hero-subtitle">
-              Our advanced machine learning algorithm accurately identifies content written by AI, helping you maintain authenticity and integrity in digital communication.
+      <section className="hero-section">
+        <div className="container hero-grid">
+          <motion.div className="hero-text" variants={fadeIn}>
+            <h1 className="hero-heading">Catch AI-Generated Content with Precision</h1>
+            <p className="hero-subtext">
+              As AI language tools evolve, distinguishing machine written content from human writing is vital for education, publishing, and authenticity. Our algorithm, rooted in classic data structures, delivers accurate, transparent detection - fast and offline.
             </p>
             <div className="hero-buttons">
-              <Link to="/trial" className="btn btn-primary btn-lg">Try It Now</Link>
-              <Link to="/developers" className="btn btn-secondary btn-lg">Meet The Team</Link>
+              <Link to="/trial" className="btn primary">Try It Now</Link>
+              <Link to="/developers" className="btn secondary">Meet The Team</Link>
             </div>
+          </motion.div>
+          <motion.div className="hero-image" variants={fadeIn}>
+            <img src="https://images.pexels.com/photos/6940096/pexels-photo-6940096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="AI detection illustration" />
           </motion.div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="features">
+      {/* Features */}
+      <section className="features-section">
         <div className="container">
-          <motion.div 
-            className="section-header"
-            variants={fadeIn}
-          >
-            <h2>How It Works</h2>
-            <p>Our AI detection technology analyzes text using multiple linguistic markers to determine authenticity</p>
+          <motion.div className="section-title" variants={fadeIn}>
+            <h2>Algorithm Powered by Classic DSA</h2>
+            <p>Our hybrid detection system leverages proven algorithms for pattern recognition, plagiarism check, and semantic similarity without black-box AI.</p>
           </motion.div>
 
-          <motion.div 
-            className="features-grid"
-            variants={staggerContainer}
-          >
-            <motion.div className="feature-card" variants={fadeIn}>
-              <div className="feature-icon">
-                <FiTrendingUp />
-              </div>
-              <h3>Pattern Recognition</h3>
-              <p>Our algorithm identifies patterns in text that are characteristic of AI-generated content.</p>
-            </motion.div>
-
-            <motion.div className="feature-card" variants={fadeIn}>
-              <div className="feature-icon">
-                <FiShield />
-              </div>
-              <h3>High Accuracy</h3>
-              <p>Precision-tuned machine learning models provide reliable results with 95%+ accuracy.</p>
-            </motion.div>
-
-            <motion.div className="feature-card" variants={fadeIn}>
-              <div className="feature-icon">
-                <FiCode />
-              </div>
-              <h3>Advanced Algorithms</h3>
-              <p>Utilizes cutting-edge NLP techniques to analyze sentence structure and semantic patterns.</p>
-            </motion.div>
-
-            <motion.div className="feature-card" variants={fadeIn}>
-              <div className="feature-icon">
-                <FiFileText />
-              </div>
-              <h3>Instant Results</h3>
-              <p>Get immediate feedback on whether your content was likely written by AI or a human.</p>
-            </motion.div>
+          <motion.div className="features-grid" variants={staggerContainer}>
+            {[{
+              icon: <FaHashtag />, title: "Hashing (Pattern Analysis)",
+              desc: "Analyze n-gram frequencies and compare patterns against AI-trained datasets."
+            }, {
+              icon: <FaBrain />, title: "Trie (Phrase Detection)",
+              desc: "Identify repetitive AI-like phrases through prefix tree structure."
+            }, {
+              icon: <FaNetworkWired />, title: "Graph (Semantic Flow)",
+              desc: "Build word-relationship graphs and trace semantic connections using BFS/DFS."
+            }, {
+              icon: <FaFileAlt />, title: "Dynamic Programming (Edit Distance)",
+              desc: "Compare text similarity to AI corpuses using Levenshtein distance."
+            }, {
+              icon: <FaSortAmountUp />, title: "Heap (Word Frequency)",
+              desc: "Surface commonly overused words with Max Heap for pattern match."
+            }].map((item, i) => (
+              <motion.div key={i} className="feature-card glass" variants={fadeIn}>
+                <div className="icon">{item.icon}</div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Research Section */}
-      <section className="research">
-        <div className="container">
-          <motion.div 
-            className="section-header"
-            variants={fadeIn}
-          >
-            <h2>Our Research</h2>
-            <p>Based on extensive linguistic analysis and machine learning techniques</p>
+      {/* Research */}
+      <section className="research-section">
+        <div className="container research-layout">
+          <motion.div className="research-text" variants={fadeIn}>
+            <h2>What Makes Our Method Unique?</h2>
+            <p>
+              Instead of relying on opaque machine learning models, we use interpretable, logic-based approaches using:
+            </p>
+            <ul>
+              <li>Hashing for linguistic fingerprinting</li>
+              <li> Tries for AI phrase spotting</li>
+              <li> Graphs to trace semantic flow</li>
+              <li> Edit Distance for plagiarism check</li>
+              <li> Heaps for pattern-heavy word detection</li>
+            </ul>
+            <p>
+              This makes our detection fast, explainable, and usable offline—ideal for schools, publishers, and content platforms.
+            </p>
+            <a href="https://drive.google.com/file/d/1ZVFwXYeZXWUa2ko9aVD20IlH_lUKila_/preview" target="_blank" rel="noopener noreferrer" className="btn accent">Read Our Paper</a>
           </motion.div>
-
-          <motion.div 
-            className="research-content"
-            variants={fadeIn}
-          >
-            <div className="research-text">
-              <h3>Scientific Foundation</h3>
-              <p>
-                Our AI detection algorithm is based on research in computational linguistics, 
-                stylometry, and natural language processing. The system has been trained on a diverse 
-                dataset of both human-written and AI-generated content to recognize subtle differences 
-                in patterns, word choice, syntax complexity, and semantic coherence.
-              </p>
-              <p>
-                The research paper titled "Linguistic Markers of AI-Generated Text" outlines our approach 
-                and methodology, demonstrating how our system achieves high accuracy rates in distinguishing 
-                between human and AI authors.
-              </p>
-              <a href="#" className="btn btn-accent">Read Research Paper</a>
-            </div>
-            <div className="research-image">
-              <img src="https://images.pexels.com/photos/7103238/pexels-photo-7103238.jpeg" alt="AI research visualization" />
-            </div>
+          <motion.div className="research-image" variants={fadeIn}>
+            <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="research illustration" />
           </motion.div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="cta">
+      {/* Call to Action */}
+      <section className="cta-section">
         <div className="container">
-          <motion.div 
-            className="cta-content"
-            variants={fadeIn}
-          >
-            <h2>Ready to Try It Yourself?</h2>
-            <p>Test our AI content detection tool with your own text samples.</p>
-            <Link to="/trial" className="btn btn-primary btn-lg">Start Detection</Link>
+          <motion.div className="cta-box" variants={fadeIn}>
+            <h2>Ready to Try the Tool?</h2>
+            <p>Paste your text and let our algorithm reveal its origin.</p>
+            <Link to="/trial" className="btn primary">Start Detection</Link>
           </motion.div>
         </div>
       </section>
