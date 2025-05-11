@@ -25,7 +25,7 @@ function Trial() {
     setVisible(false);
   
     try {
-      const response = await fetch('http://localhost:5000/analyze', {
+      const response = await fetch('https://ai-content-detector-backend-dbdq.onrender.com/analyze', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ function Trial() {
     } finally {
       setIsLoading(false);
       setVisible(true);
-      setTimeout(() => setVisible(false), 5000);
+      setTimeout(() => setVisible(false), 50000);
     }
   };
 
