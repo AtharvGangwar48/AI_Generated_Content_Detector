@@ -59,7 +59,7 @@ const Suggestion = () => {
                   <FiGithub />
                 </div>
                 <h3>Github Repository (API)</h3>
-                <a href='https://github.com/AtharvGangwar48'>See Repository</a>
+                <a href='https://github.com/AtharvGangwar48/AI_Content_Detector_Backend'>See Repository</a>
               </motion.div>
 
               <motion.div className="contact-card" variants={fadeIn}>
@@ -67,7 +67,7 @@ const Suggestion = () => {
                   <FiGithub />
                 </div>
                 <h3>Github Repository (Frontend)</h3>
-                <a href='https://github.com/AtharvGangwar48'>See Repository</a>
+                <a href='https://github.com/AtharvGangwar48/AI_Generated_Content_Detector'>See Repository</a>
               </motion.div>
             </motion.div>
 
