@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-title">Connect</h3>
             <div className="footer-social">
-              <a href="https://github.com/AtharvGangwar48/AI_Generated_Content_API" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <a href="https://github.com/AtharvGangwar48/AI_Content_Detector_Backend" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <FiGithub />
               </a>
               <a href="mailto:atharvgangwar8@gmail.com" aria-label="Email">
