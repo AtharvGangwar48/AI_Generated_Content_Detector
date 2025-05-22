@@ -47,7 +47,7 @@ const Home = () => {
             </div>
           </motion.div>
           <motion.div className="hero-image" variants={fadeIn}>
-            <img src="https://images.pexels.com/photos/6940096/pexels-photo-6940096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="AI detection illustration" />
+            <img src="https://images.pexels.com/photos/8566521/pexels-photo-8566521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="AI detection illustration" />
           </motion.div>
         </div>
       </section>
